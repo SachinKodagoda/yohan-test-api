@@ -2,13 +2,13 @@ import express, { Express } from "express";
 import "dotenv/config";
 import cors from "cors";
 import apiRouter from "./routes/index.ts";
-import { connectToMongoDB } from "./util/dbConnector.ts";
+// import { connectToMongoDB } from "./util/dbConnector.ts";
 import { handleOtherErrors, handleURIError } from "./util/individualErrors.ts";
 
 const createApp = (): Express => {
   const app = express();
 
-  connectToMongoDB();
+  // connectToMongoDB();
 
   app.use(cors());
   app.use(express.json());
